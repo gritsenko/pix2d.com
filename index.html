@@ -15,22 +15,22 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS9DKCMXR3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS9DKCMXR3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-SS9DKCMXR3');
-</script>
+        gtag('config', 'G-SS9DKCMXR3');
+    </script>
 
-<script>
-    const isLocalHost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    <script>
+        const isLocalHost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 
-    if (location.protocol !== 'https:' && !isLocalHost) {
-        location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    }
-</script>
+        if (location.protocol !== 'https:' && !isLocalHost) {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
 
 </head>
 <!--NavBar-->
@@ -49,21 +49,25 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(51723311, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/51723311" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(51723311, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/51723311" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%; z-index: 8000;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -86,7 +90,7 @@
                     <a class="nav-link" href="#release-notes">Release Notes</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/pix2d">Blog</a>
+                    <a class="nav-link" href="https://t.me/s/pix2dApp">Blog</a>
                 </li>
 
             </ul>
@@ -348,7 +352,24 @@
                             </div>
                             <div class="col-sm-4 feature-item">
                                 <h2>
-                                    Android (Beta)
+                                    Windows Installer
+                                </h2>
+
+                                <div>
+                                    <!-- <script src="https://gumroad.com/js/gumroad.js"></script>
+                                    <a class="gumroad-button" href="https://gum.co/FlQVG?wanted=true"
+                                        target="_blank">For windows 10</a> -->
+                                    <a href="https://github.com/gritsenko/pix2d.com/releases/download/Windows-v3.1.1/pix2d_x64_setup.exe" class="btn btn-secondary download-btn" id="direct-download-btn">
+                                        Windows 11 x64</a>
+                                    <!-- <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
+                                        Windows x86</a>
+                                    <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
+                                        Windows Arm</a> -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 feature-item">
+                                <h2>
+                                    Android
                                 </h2>
                                 <a target="_blank" class="download-btn"
                                     style="background-image: url(img/android_get_button.png);"
@@ -357,20 +378,14 @@
                             </div>
                             <div class="col-sm-4 feature-item">
                                 <h2>
-                                    Full offline version
+                                    Linux version
                                 </h2>
 
-                                <div>
-                                    <script src="https://gumroad.com/js/gumroad.js"></script>
-                                    <a class="gumroad-button" href="https://gum.co/FlQVG?wanted=true"
-                                        target="_blank">For windows 10</a>
-                                    <!-- <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        For Windows 10</a> -->
-                                    <!-- <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        Windows x86</a>
-                                    <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        Windows Arm</a> -->
-                                </div>
+                                <a target="_blank" class="download-btn"
+                                    style="background-image: url(img/BadgeLinux.png);"
+                                    href="https://github.com/gritsenko/pix2d.com/releases/download/Linux-v.3.0.3/pix2d_x64_3.0.3.tar.gz">
+                                </a>
+
                             </div>
                         </div>
                     </div>
