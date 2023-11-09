@@ -44,9 +44,10 @@ body {
 	margin-top: 16px;
 }
 
-#release-notes li{
-	margin-top:8px;
+#release-notes li {
+	margin-top: 8px;
 }
+
 .feature-item {
 	text-align: left;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 .panel-bg {
-	background-color: #444e58!important;
+	background-color: #444e58 !important;
 }
 
 .feature-preview {
@@ -128,7 +129,8 @@ body {
 
 /* Add Animation - Zoom in the Modal */
 
-.modal-content, #caption {
+.modal-content,
+#caption {
 	animation-name: zoom;
 	animation-duration: 0.6s;
 }
@@ -137,6 +139,7 @@ body {
 	from {
 		transform: scale(0)
 	}
+
 	to {
 		transform: scale(1)
 	}
@@ -154,7 +157,8 @@ body {
 	transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
@@ -168,7 +172,7 @@ body {
 	}
 }
 
-.download-btn{
+.download-btn {
 	display: block;
 	height: 48px;
 	background-repeat: no-repeat;
@@ -182,3 +186,81 @@ body {
 	border: #fff 1px solid;
 	padding-top: 10px;
 }
+
+.container {
+	margin-top: 20px;
+}
+
+/* BUY FORM */
+.payform-tinkoff {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 2px auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-width: 250px;
+}
+.payform-tinkoff-row {
+	margin: 2px;
+	border-radius: 4px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	border: 1px solid #DFE3F3;
+	padding: 15px;
+	outline: none;
+	background-color: #DFE3F3;
+	font-size: 15px;
+}
+.payform-tinkoff-row:focus {
+	background-color: #FFFFFF;
+	border: 1px solid #616871;
+	border-radius: 4px;
+}
+.payform-tinkoff-btn {
+	background-color: #FBC520;
+	border: 1px solid #FBC520;
+	color: #3C2C0B;
+}
+.payform-tinkoff-btn:hover {
+	background-color: #FAB619;
+	border: 1px solid #FAB619;
+}
+
+.input-icon {
+	position: relative;
+  }
+  
+  .input-icon > i {
+	color: #3C2C0B;
+	font-weight: 600;
+	position: absolute;
+	display: block;
+	transform: translate(0, -50%);
+	top: 50%;
+	pointer-events: none;
+	width: 25px;
+	text-align: center;
+	font-style: normal;
+  }
+  
+  .input-icon > input {
+	padding-left: 25px;
+	padding-right: 0;
+  }
+  
+  .input-icon-right > i {
+	right: 0;
+  }
+  
+  .input-icon-right > input {
+	padding-left: 0;
+	padding-right: 25px;
+	text-align: right;
+  }

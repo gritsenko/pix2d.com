@@ -99,6 +99,7 @@
             </ul>
 
             <a href="#download" class="btn btn-warning my-2 my-sm-0">Download</a>
+            <a href="#buy" class="btn btn-secondary my-2 my-sm-0" style="margin-left: 8px;">Purchase</a>
 
         </div>
     </nav>
@@ -337,9 +338,48 @@
                         </div>
                     </div> -->
 
-                    <br />
-                    <br />
-                    <br />
+                    <div class="container" id="support">
+                        <h1 style="color:white">Support and Community</h1>
+                        <div class="row" style="padding: 50px 0px;">
+
+                            <div class="col">
+                                <iframe src="https://discord.com/widget?id=703323038157897808&theme=dark" width="350"
+                                    height="500" allowtransparency="true" frameborder="0"
+                                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                            </div>
+
+                            <div class="col">
+                                <script async src="https://telegram.org/js/telegram-widget.js?22"
+                                    data-telegram-post="pix2dApp/4" data-width="100%" data-userpic="true"></script>
+
+                                <div style="margin-top: 20px;">
+                                    <p>Official Boosty.to page</p>
+                                    <a href="https://boosty.to/pix2d" target="_blank">
+                                        <img width="300" src="/img/Channel_Logo_3000x750.webp" />
+                                    </a>
+                                </div>
+
+
+                                <div style="margin-top: 20px; text-align: center;">
+                                    <p>Official VK community</p>
+
+                                    <div style="display: flex; justify-content: center;">
+                                        <script type="text/javascript"
+                                            src="https://vk.com/js/api/openapi.js?169"></script>
+
+                                        <!-- VK Widget -->
+                                        <div id="vk_groups"></div>
+                                        <script type="text/javascript">
+                                            VK.Widgets.Group("vk_groups", { mode: 3, color1: '39414F', color2: 'FFFFFF', color3: 'FFE65B' }, 104032292);
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
 
                     <div class="container" id="download">
                         <h1 style="color:white">Download</h1>
@@ -362,7 +402,8 @@
                                     <!-- <script src="https://gumroad.com/js/gumroad.js"></script>
                                     <a class="gumroad-button" href="https://gum.co/FlQVG?wanted=true"
                                         target="_blank">For windows 10</a> -->
-                                    <a href="https://github.com/gritsenko/pix2d.com/releases/download/Windows-v3.1.1/pix2d_x64_setup.exe" class="btn btn-secondary download-btn" id="direct-download-btn">
+                                    <a href="https://github.com/gritsenko/pix2d.com/releases/download/Windows-v3.1.1/pix2d_x64_setup.exe"
+                                        class="btn btn-secondary download-btn" id="direct-download-btn">
                                         Windows 11 x64</a>
                                     <!-- <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
                                         Windows x86</a>
@@ -392,6 +433,37 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="container" id="buy">
+                        <h1 style="color:white">Buy the license key with TInkoff kassa</h1>
+                        <div class="row">
+                            <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
+                            <form class="payform-tinkoff" name="payform-tinkoff" onsubmit="pay(this); return false;">
+                                <input class="payform-tinkoff-row" type="hidden" name="terminalkey"
+                                    value="1699369699685DEMO">
+                                <input class="payform-tinkoff-row" type="hidden" name="frame" value="true">
+                                <input class="payform-tinkoff-row" type="hidden" name="language" value="en">
+
+                                <div class="input-icon input-icon-right">
+                                    <input class="payform-tinkoff-row" type="text" placeholder="Сумма заказа"
+                                        name="amount" required readonly value="490">
+                                    <i>₽</i>
+                                </div>
+                                <input class="payform-tinkoff-row" type="hidden" placeholder="Номер заказа"
+                                    name="order">
+                                <input class="payform-tinkoff-row" type="hidden" placeholder="Описание заказа"
+                                    name="description">
+                                <input class="payform-tinkoff-row" type="hidden" placeholder="ФИО плательщика"
+                                    name="name">
+                                <input class="payform-tinkoff-row" type="hidden" placeholder="E-mail" name="email">
+                                <input class="payform-tinkoff-row" type="hidden" placeholder="Контактный телефон"
+                                    name="phone">
+                                <input class="payform-tinkoff-row payform-tinkoff-btn" type="submit" value="Оплатить">
+                            </form>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
