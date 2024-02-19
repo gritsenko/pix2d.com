@@ -177,8 +177,8 @@ body {
 	height: 48px;
 	background-repeat: no-repeat;
 	background-size: contain;
-	max-width: 60%;
 	margin-top: 16px;
+	white-space: nowrap;
 }
 
 #direct-download-btn {
