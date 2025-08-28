@@ -1,467 +1,494 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pix2D - Sprite, Art, Animated Graphics editor for game developers</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
-        crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pix2D - Free & Open Source Pixel Art and Sprite Editor</title>
+    <meta name="description" content="Pix2D is a free, open source animated sprite, game art, and pixel art editor with a modern UI. Optimized for desktops, tablets, and smartphones." />
+    <link rel="canonical" href="https://pix2d.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="application-name" content="Pix2D" />
+    <meta name="apple-mobile-web-app-title" content="Pix2D" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBBF24" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111827" />
+    <meta name="msapplication-TileColor" content="#111827" />
 
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Internationalization -->
+    <link rel="alternate" href="https://pix2d.com/" hreflang="en" />
+    <link rel="alternate" href="https://pix2d.com/" hreflang="x-default" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pix2D" />
+    <meta property="og:title" content="Pix2D - Free & Open Source Pixel Art and Sprite Editor" />
+    <meta property="og:description" content="Pix2D is a free, open source animated sprite, game art, and pixel art editor with a modern UI. Optimized for desktops, tablets, and smartphones." />
+    <meta property="og:url" content="https://pix2d.com/" />
+    <meta property="og:image" content="https://pix2d.com/img/Surface4.jpg" />
+    <meta property="og:image:alt" content="Pix2D editor hero background" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pix2D - Free & Open Source Pixel Art and Sprite Editor" />
+    <meta name="twitter:description" content="Pix2D is a free, open source animated sprite, game art, and pixel art editor with a modern UI. Optimized for desktops, tablets, and smartphones." />
+    <meta name="twitter:image" content="https://pix2d.com/img/Surface4.jpg" />
+    <meta name="twitter:image:alt" content="Pix2D editor hero background" />
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS9DKCMXR3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-SS9DKCMXR3');
-    </script>
-
-    <script>
-        const isLocalHost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-
-        if (location.protocol !== 'https:' && !isLocalHost) {
-            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    <script src="scripts.js" defer></script>
+    
+        <!-- Structured Data: WebSite -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Pix2D",
+            "url": "https://pix2d.com/",
+            "inLanguage": "en",
+            "sameAs": [
+                "https://github.com/gritsenko/pix2d"
+            ]
         }
-    </script>
+        </script>
 
+        <!-- Structured Data: SoftwareApplication -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Pix2D",
+            "applicationCategory": "GraphicsApplication",
+            "operatingSystem": "Windows; Android; Linux",
+            "url": "https://pix2d.com/",
+            "image": "https://pix2d.com/img/Surface4.jpg",
+            "description": "Pix2D is a free, open source animated sprite, game art, and pixel art editor with a modern UI. Optimized for desktops, tablets, and smartphones.",
+            "publisher": { "@type": "Organization", "name": "Pix2D" },
+            "isAccessibleForFree": true,
+            "offers": [{
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "USD",
+                "category": "Free"
+            }],
+            "downloadUrl": [
+                "https://www.microsoft.com/en-us/p/pix2d-pixel-art-studio/9nblggh1zdfv",
+                "https://github.com/gritsenko/pix2d/releases/download/v3.3.4/Pix2d_win-x64-3.3.4-portable.zip",
+                "https://play.google.com/store/apps/details?id=com.pix2d.pix2dapp&hl=en",
+                "https://github.com/gritsenko/pix2d/releases/download/v3.3.4/Pix2d_linux-x64-3.3.4.tar.gz"
+            ],
+            "sameAs": [
+                "https://discord.gg/s4MpBVb",
+                "https://t.me/s/pix2dApp",
+                "https://www.reddit.com/search/?q=pix2d",
+                "https://github.com/gritsenko/pix2d"
+            ]
+        }
+        </script>
 </head>
-<!--NavBar-->
 
-<body>
+<body class="bg-gray-900 text-white font-sans">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=838106086298189";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(51723311, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/51723311" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%; z-index: 8000;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Pix2D</a>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://discord.gg/s4MpBVb">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://gallery.pix2d.com">Art Gallery</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#release-notes">Release Notes</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://t.me/s/pix2dApp">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://app.pix2d.com">Pix2d Online (Beta)</a>
-                </li>
-
-            </ul>
-
-            <a href="#download" class="btn btn-warning my-2 my-sm-0">Download</a>
-            <a href="#buy" class="btn btn-secondary my-2 my-sm-0" style="margin-left: 8px;">Purchase</a>
-
-        </div>
-    </nav>
-    <!--Landing Page-->
-    <div class=" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
-        style="width: 100%; background-image: url('img/Surface4-dark.jpg'); background-attachment: fixed; background-size: cover; color:white">
-        <div class="my-3 p-3">
-            <h1 class="display-5" style="padding-top: 14%;" id="display-5">
-                Game Art design software
-            </h1>
-            <p class="lead">
-                Pix2D is a powerful <b>animated sprite</b>, <b>game art</b> and <b>pixel art editor</b>.<br /> With
-                modern UI and optimized for using on
-                desktops, tablets and smartphones.
-            </p>
-
-            <a href="#download" class="btn btn-warning my-2 my-sm-0">Download</a>
-
-            <div style="padding: 24px; margin-top: 32px;">
-                <!-- <iframe width="640" height="400" src="https://www.youtube.com/embed/VttRhwHZ-Ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <iframe style="max-width:100%; box-shadow:0px 0px 32px #444;" width="853" height="480"
-                    src="https://www.youtube-nocookie.com/embed/VttRhwHZ-Ko?rel=0&amp;showinfo=0" frameborder="0"
-                    allowfullscreen=""></iframe>
-            </div>
-
-            <div style="padding-bottom: 9%;"></div>
-
-        </div>
-        <div class="features-panel panel-bg box-shadow mx-auto">
-            <div style="width: 100%;">
-                <br />
-                <div class="features">
-                    <div class="container">
-                        <h1 style="color:white">With Pix2D you can make</h1>
-                        <div class="row">
-                            <div class="col-sm-4 feature-item">
-
-                                <h2> Sprites</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Sprites.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-
-                                <h2>Pixel Art</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/PixelArt.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-
-                                <h2>Animations</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Animation1.gif);">
-                                </div>
-                            </div>
-                        </div>
+    <nav class="bg-gray-900/80 backdrop-blur-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-yellow-400">Pix2D</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="https://t.me/s/pix2dApp" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                        <a href="https://app.pix2d.com" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Pix2d Online (Beta)</a>
+                        <a href="https://github.com/gritsenko/pix2d" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-2">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                            <span>GitHub</span>
+                            <img src="https://img.shields.io/github/stars/gritsenko/pix2d?style=social" alt="GitHub stars" class="h-4 ml-1">
+                        </a>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-
-                    <div class="container">
-                        <h1 style="color:white">Drawing tools and Features</h1>
-                        <div class="row">
-                            <div class="col-sm-4 feature-item">
-                                <h2>Modern UI</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Tools.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Palette control</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Palette.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Brush settings</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Brushes.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Animation</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/animation.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Layers support</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Layers.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Original preview</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/PreviewPanel.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Pixel perfect shapes</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Shapes.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Extra tools</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/ActionBar.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Custom grids</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/GridSettings.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Layer effects</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Effects.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Blend modes</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/BlendModes.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Formats support</h2>
-                                <div class="feature-preview" style="background-image: url(img/ExportPostProcess.png);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Text tool</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/Text.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Onion skin</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/OnionSkin.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Mobile app</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/MobileMode.jpg);">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <div class="container">
-                        <h1 style="color:white">Upcoming features</h1>
-                        <div class="row">
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Layout mode</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/FullMode.jpg);">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 feature-item">
-                                <h2>Scripting (plugins)</h2>
-                                <div class="feature-preview" style="background-image: url(img/art/blurred.jpg);">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <div class="container" id="support">
-                        <h1 style="color:white">Support and Community</h1>
-                        <div class="row" style="padding: 50px 0px;">
-
-                            <div class="col">
-                                <iframe src="https://discord.com/widget?id=703323038157897808&theme=dark" width="350"
-                                    height="500" allowtransparency="true" frameborder="0"
-                                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                            </div>
-
-                            <div class="col">
-                                <script async src="https://telegram.org/js/telegram-widget.js?22"
-                                    data-telegram-post="pix2dApp/4" data-width="100%" data-userpic="true"></script>
-
-                                <div style="margin-top: 20px;">
-                                    <p>Official Boosty.to page</p>
-                                    <a href="https://boosty.to/pix2d" target="_blank">
-                                        <img width="300" src="/img/Channel_Logo_3000x750.webp" />
-                                    </a>
-                                </div>
-
-
-                                <div style="margin-top: 20px; text-align: center;">
-                                    <p>Official VK community</p>
-
-                                    <div style="display: flex; justify-content: center;">
-                                        <script type="text/javascript"
-                                            src="https://vk.com/js/api/openapi.js?169"></script>
-
-                                        <!-- VK Widget -->
-                                        <div id="vk_groups"></div>
-                                        <script type="text/javascript">
-                                            VK.Widgets.Group("vk_groups", { mode: 3, color1: '39414F', color2: 'FFFFFF', color3: 'FFE65B' }, 104032292);
-                                        </script>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="container" id="download">
-                        <h1 style="color:white">Download</h1>
-                        <div class="row">
-                            <div class="col-sm-4 feature-item">
-                                <h2>
-                                    Windows Store
-                                </h2>
-                                <a target="_blank" class="download-btn"
-                                    style="background-image: url(img/English_get-it-from-MS.png);"
-                                    href="https://www.microsoft.com/en-us/p/pix2d-pixel-art-studio/9nblggh1zdfv">
-                                </a>
-                            </div>
-                            <div class="col-sm-4 feature-item">
-                                <h2>
-                                    Windows Installer
-                                </h2>
-
-                                <div>
-                                    <!-- <script src="https://gumroad.com/js/gumroad.js"></script>
-                                    <a class="gumroad-button" href="https://gum.co/FlQVG?wanted=true"
-                                        target="_blank">For windows 10</a> -->
-                                    <a href="https://github.com/gritsenko/pix2d.com/releases/download/v3.2.2/pix2d_setup.exe"
-                                        class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        Windows 11 x64</a>
-                                    <!-- <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        Windows x86</a>
-                                    <a href="#download" class="btn btn-secondary download-btn" id="direct-download-btn">
-                                        Windows Arm</a> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 feature-item">
-                                <h2>
-                                    Android
-                                </h2>
-                                <a target="_blank" class="download-btn"
-                                    style="background-image: url(img/android_get_button.png);"
-                                    href="https://play.google.com/store/apps/details?id=com.pix2d.pix2dapp&hl=en">
-                                </a>
-                            </div>
-                            <div class="col-sm-4 feature-item">
-                                <h2>
-                                    Linux version
-                                </h2>
-
-                                <a target="_blank" class="download-btn"
-                                    style="background-image: url(img/BadgeLinux.png);"
-                                    href="https://github.com/gritsenko/pix2d.com/releases/download/v3.1.3/pix2d_x64_3.1.3-Linux.tar.gz">
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container" id="buy">
-                        <h1 style="color:white">Buy the license key with TInkoff kassa</h1>
-                        <div class="row">
-                            <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
-                            <form class="payform-tinkoff" name="payform-tinkoff" onsubmit="pay(this); return false;">
-                                <input class="payform-tinkoff-row" type="hidden" name="terminalkey"
-                                    value="1699369699685">
-                                <input class="payform-tinkoff-row" type="hidden" name="frame" value="true">
-                                <input class="payform-tinkoff-row" type="hidden" name="language" value="en">
-
-                                <div class="input-icon input-icon-right">
-                                    <input class="payform-tinkoff-row" type="text" placeholder="Сумма заказа"
-                                        name="amount" required readonly value="490">
-                                    <i>₽</i>
-                                </div>
-                                <input class="payform-tinkoff-row" type="hidden" placeholder="Номер заказа"
-                                    name="order">
-                                <input class="payform-tinkoff-row" type="hidden" placeholder="Описание заказа"
-                                    name="description">
-                                <input class="payform-tinkoff-row" type="hidden" placeholder="ФИО плательщика"
-                                    name="name">
-                                <input class="payform-tinkoff-row" type="hidden" placeholder="E-mail" name="email">
-                                <input class="payform-tinkoff-row" type="hidden" placeholder="Контактный телефон"
-                                    name="phone">
-                                <input class="payform-tinkoff-row payform-tinkoff-btn" type="submit" value="Оплатить">
-                            </form>
-
-                        </div>
-                    </div>
-
+                </div>
+                <div class="hidden md:block">
+                     <a href="#download" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold py-2 px-4 rounded-lg">Download</a>
+                     <a href="/donate.html" class="ml-4 bg-gray-700 text-white hover:bg-gray-600 font-bold py-2 px-4 rounded-lg">Donate</a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                 <a href="https://t.me/s/pix2dApp" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                 <a href="https://app.pix2d.com" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pix2d Online (Beta)</a>
+                 <a href="https://github.com/gritsenko/pix2d" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2">
+                     <svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                     <span>GitHub</span>
+                     <img src="https://img.shields.io/github/stars/gritsenko/pix2d?style=social" alt="GitHub stars" class="h-4 ml-1">
+                 </a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-700">
+                <div class="flex items-center px-5">
+                 <a href="#download" class="w-full text-center bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold py-2 px-4 rounded-lg">Download</a>
+                </div>
+                 <div class="mt-3 flex items-center px-5">
+                 <a href="/donate.html" class="w-full text-center bg-gray-700 text-white hover:bg-gray-600 font-bold py-2 px-4 rounded-lg">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('img/Surface4-dark.jpg');">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Free & Open Source <span class="text-yellow-400">Pixel Art & Sprite Editor</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    Pix2D is now free and open source. A powerful editor for animated sprites, game art, and pixel art with a modern UI across desktop and mobile.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#download" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold py-3 px-8 rounded-lg text-lg">Download Now</a>
+                    <a href="/donate.html" class="bg-gray-700 text-white hover:bg-gray-600 font-bold py-3 px-8 rounded-lg text-lg">Donate</a>
+                    <a href="https://github.com/gritsenko/pix2d" class="bg-gray-800 text-white hover:bg-gray-700 font-bold py-3 px-8 rounded-lg text-lg inline-flex items-center gap-2" target="_blank" rel="noopener">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                        <span>View on GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white">With Pix2D you can make</h2>
+                </div>
+                <div class="mt-12 grid gap-8 md:grid-cols-3">
+                    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/screenshot1.jpg" alt="Sprites" class="w-full h-48 object-cover cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('img/screenshot1.jpg', 'Sprites')">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-yellow-400">Sprites</h3>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/art/PixelArt.jpg" alt="Pixel Art" class="w-full h-48 object-cover cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('img/art/PixelArt.jpg', 'Pixel Art')">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-yellow-400">Pixel Art</h3>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/drake.gif" alt="Animations" class="w-full h-48 object-cover cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('img/drake.gif', 'Animations')">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-yellow-400">Animations</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Features -->
+        <section class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white">Drawing tools and features</h2>
+                </div>
+                <div class="mt-12 grid gap-5 md:grid-cols-3 lg:grid-cols-5">
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div><span class="font-medium">Modern UI</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg></div><span class="font-medium">Palette control</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L14.5 6.536z"></path></svg></div><span class="font-medium">Brush settings</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4"></path></svg></div><span class="font-medium">Animation</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></div><span class="font-medium">Layers support</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></div><span class="font-medium">Original preview</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M4 17v4m-1-2h4m10-4h2m-2-2v4m-4 4h4m-2-4v4m4-14h-4m2 2V3m-4 18v-4m-2 4h4"></path></svg></div><span class="font-medium">Pixel perfect shapes</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m8-6h2M4 12H2m15.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414m12.728 0l-1.414 1.414M5.636 18.364l-1.414 1.414M12 18a6 6 0 100-12 6 6 0 000 12z"></path></svg></div><span class="font-medium">Extra tools</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path></svg></div><span class="font-medium">Custom grids</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.636-6.364l.707.707M12 21v-1m-6.364-1.636l.707-.707M6 12a6 6 0 1112 0 6 6 0 01-12 0z"></path></svg></div><span class="font-medium">Layer effects</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19M3 3l4.879 4.879M12 12a2.828 2.828 0 100-4 2.828 2.828 0 000 4z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg></div><span class="font-medium">Blend modes</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div><span class="font-medium">Formats support</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10m0 0h16M4 17h16M4 7h16M9 4v3m6-3v3"></path></svg></div><span class="font-medium">Text tool</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422A12.083 12.083 0 0121 12c0 6.627-5.373 12-12 12S-3 18.627-3 12a12.083 12.083 0 012.84-6.422L12 14z"></path></svg></div><span class="font-medium">Onion skin</span></div>
+                    <div class="flex items-center space-x-4"><div class="text-yellow-400"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><span class="font-medium">Mobile app</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="py-20 bg-gray-800" id="support">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white">Join Our Community</h2>
+                    <p class="mt-4 text-gray-300 text-lg">Connect with fellow pixel artists, get help, and share your creations</p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 gap-8 items-start">
+
+                    <!-- Telegram Community -->
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-700">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-blue-600 p-2 rounded-lg">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.83 5.42-1.18 7.2-.18.91-.42 1.21-.65 1.24-.39.04-.65-.27-.84-.52-.28-.35-1.76-1.83-2.18-2.24-.28-.26-.6-.35-.78-.35-.15 0-.38.04-.58.22-.28.26-.99.89-1.01 1.08-.02.19.13.29.28.45.22.22 2.02 1.93 2.18 2.08.16.15.27.22.41.22.14 0 .29-.05.42-.15.18-.13 2.36-1.74 2.78-2.08.32-.26.58-.43.7-.51.12-.08.02-.18-.05-.26-.13-.13-2.05-1.95-2.76-2.61-.61-.55-.99-.46-1.34-.46-.43 0-.69.25-.88.52-.28.39-1.1 1.37-1.1 1.37s-.08.08-.2.02c-.22-.08-.88-.58-.88-.58s-.52-.34-.48-1.1c.02-.39.24-.89.24-.89s.04-.08.12-.02c.08.06 1.08 1.08 1.08 1.08s.08.08.16.02c.08-.06.52-.34.52-.34s.28-.16.44-.02c.16.14.64 1.02.64 1.02s.08.16.02.24z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Telegram Community</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">Join our active community of pixel artists! Share your work, get feedback, and stay updated with the latest news.</p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="pix2dApp/4" data-width="100%" data-userpic="true"></script>
+                        </div>
+                        <a href="https://t.me/s/pix2dApp" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.83 5.42-1.18 7.2-.18.91-.42 1.21-.65 1.24-.39.04-.65-.27-.84-.52-.28-.35-1.76-1.83-2.18-2.24-.28-.26-.6-.35-.78-.35-.15 0-.38.04-.58.22-.28.26-.99.89-1.01 1.08-.02.19.13.29.28.45.22.22 2.02 1.93 2.18 2.08.16.15.27.22.41.22.14 0 .29-.05.42-.15.18-.13 2.36-1.74 2.78-2.08.32-.26.58-.43.7-.51.12-.08.02-.18-.05-.26-.13-.13-2.05-1.95-2.76-2.61-.61-.55-.99-.46-1.34-.46-.43 0-.69.25-.88.52-.28.39-1.1 1.37-1.1 1.37s-.08.08-.2.02c-.22-.08-.88-.58-.88-.58s-.52-.34-.48-1.1c.02-.39.24-.89.24-.89s.04-.08.12-.02c.08.06 1.08 1.08 1.08 1.08s.08.08.16.02c.08-.06.52-.34.52-.34s.28-.16.44-.02c.16.14.64 1.02.64 1.02s.08.16.02.24z"/>
+                            </svg>
+                            Join Telegram Channel
+                        </a>
+                    </div>
+
+                    <!-- Support & Bug Reports -->
+                    <div class="space-y-6">
+                        <!-- GitHub Issues -->
+                        <div class="bg-gray-900 rounded-xl p-6 border border-gray-700">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-gray-700 p-2 rounded-lg">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Report Issues & Suggestions</h3>
+                            </div>
+                            <p class="text-gray-300 mb-4">Found a bug or have a feature request? Help us improve Pix2D by reporting issues on GitHub.</p>
+                            <div class="space-y-3">
+                                <a href="https://github.com/gritsenko/pix2d/issues" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition w-full justify-center">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                                    </svg>
+                                    Report Bug
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/issues" target="_blank" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition w-full justify-center">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.58 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    Feature Request
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Additional Community Links -->
+                        <div class="bg-gray-900 rounded-xl p-6 border border-gray-700">
+                            <h3 class="text-xl font-bold text-white mb-4">More Ways to Connect</h3>
+                            <div class="space-y-3">
+                                <a href="https://github.com/gritsenko/pix2d" target="_blank" class="flex items-center gap-3 p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition">
+                                    <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                                    </svg>
+                                    <span class="text-gray-300">GitHub Repository</span>
+                                </a>
+                                <a href="https://www.reddit.com/search/?q=pix2d" target="_blank" class="flex items-center gap-3 p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition">
+                                    <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.44 6.3c.38 0 .69.31.69.69s-.31.69-.69.69-.69-.31-.69-.69.31-.69.69-.69zM8.52 9.69c0-.38.31-.69.69-.69s.69.31.69.69-.31.69-.69.69-.69-.31-.69-.69zm6.93 6.93c-.59.59-1.37.88-2.2.88s-1.61-.29-2.2-.88c-.14-.14-.14-.37 0-.51.14-.14.37-.14.51 0 .44.44 1.03.67 1.69.67s1.25-.23 1.69-.67c.14-.14.37-.14.51 0 .14.14.14.37 0 .51zM12 6.25c-2.76 0-5 2.24-5 5 0 1.38.56 2.64 1.48 3.56.14.14.14.37 0 .51-.14.14-.37.14-.51 0C7.56 14.64 7 13.38 7 12c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.38-.56 2.64-1.48 3.56-.14.14-.37.14-.51 0-.14-.14-.14-.37 0-.51C16.44 14.64 17 13.38 17 12c0-2.76-2.24-5-5-5z"/>
+                                    </svg>
+                                    <span class="text-gray-300">Reddit Community</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="py-20 bg-gray-900" id="download">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white">Download Pix2D</h2>
+                </div>
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://www.microsoft.com/en-us/p/pix2d-pixel-art-studio/9nblggh1zdfv" target="_blank" class="bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold">Windows Store</h3>
+                        <img src="img/English_get-it-from-MS.png" alt="Get it from Microsoft" class="mt-4 h-12">
+                    </a>
+                    <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.4/Pix2d_win-x64-3.3.4-portable.zip" class="bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold">Windows Portable</h3>
+                        <span class="mt-4 bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg">Windows 11 x64</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pix2d.pix2dapp&hl=en" target="_blank" class="bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold">Android</h3>
+                        <img src="img/android_get_button.png" alt="Get it on Google Play" class="mt-4 h-12">
+                    </a>
+                    <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.4/Pix2d_linux-x64-3.3.4.tar.gz" target="_blank" class="bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center hover:bg-gray-700 transition">
+                        <h3 class="text-xl font-bold">Linux Version</h3>
+                        <img src="img/BadgeLinux.png" alt="Download for Linux" class="mt-4 h-12">
+                    </a>
+                </div>
+
+                <!-- Try Web Version Section -->
+                <div class="mt-12 bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-8 text-center">
+                    <div class="max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-white mb-4">🎨 Try Pix2D Online - No Download Required!</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Experience the full power of Pix2D directly in your browser. Create pixel art, animations, and sprites instantly without installation.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="https://app.pix2d.com" target="_blank" class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition transform hover:scale-105 inline-flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                Try Pix2D Online
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <span class="inline-flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    Works on all devices
+                                </span>
+                                <span class="inline-flex items-center gap-1 ml-4">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    No installation needed
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4">
+                            Your work is saved locally in your browser. For advanced features and offline use, download the desktop version above.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Additional Downloads -->
+                <div class="mt-8 text-center">
+                    <p class="text-gray-300 mb-4">Direct APK download for Android:</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.4/pix2d_v3.3.4.apk" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            Download APK
+                        </a>
+                        <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.4/pix2d_v3.3.4.aab" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                            Download AAB
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Releases Section -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-white mb-6">Other Releases</h3>
+                    <div class="space-y-6">
+
+                        <!-- v3.3.3 Release -->
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-xl font-semibold text-yellow-400">Pix2D v3.3.3</h4>
+                                <span class="text-sm text-gray-400">June 11, 2025</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Previous stable release with additional platform support including macOS.</p>
+                            <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/Pix2d_win-x64-3.3.3-portable.zip" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    Windows Portable
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/Pix2d_linux-x64-3.3.3.tar.gz" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    Linux
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/Pix2d_macOS-intel-64-3.3.3.dmg" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    macOS Intel
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/Pix2d_macOS-arm-64-3.3.3.dmg" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    macOS ARM
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/pix2d_v3.3.3.apk" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    Android APK
+                                </a>
+                                <a href="https://github.com/gritsenko/pix2d/releases/download/v3.3.3/pix2d_v3.3.3.aab" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg text-center transition">
+                                    Android AAB
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- View All Releases Link -->
+                        <div class="text-center">
+                            <a href="https://github.com/gritsenko/pix2d/releases" target="_blank" class="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                                </svg>
+                                View All Releases on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate Section -->
+        <section class="py-20 bg-gray-800" id="donate">
+            <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-white">Support Development</h2>
+                <p class="mt-4 text-gray-300">Pix2D is free and open source. If you find it useful, consider supporting ongoing development.</p>
+                <div class="mt-8 bg-gray-900 p-8 rounded-lg">
+                    <a href="/donate.html" class="inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold py-3 px-8 rounded-lg text-lg">Donate</a>
+                    <a href="https://github.com/gritsenko/pix2d" target="_blank" rel="noopener" class="ml-4 inline-block bg-gray-700 text-white hover:bg-gray-600 font-bold py-3 px-8 rounded-lg text-lg inline-flex items-center gap-2">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="mb-2">© <span id="year"></span> Pix2D. All rights reserved.</div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://t.me/s/pix2dApp" target="_blank" rel="noopener" class="hover:text-yellow-400">Telegram</a>
+                <a href="https://github.com/gritsenko/pix2d" target="_blank" rel="noopener" class="hover:text-yellow-400 inline-flex items-center gap-2">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-1.02-.01-1.85-2.78.62-3.37-1.19-3.37-1.19-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.5c.85 0 1.7.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="/LICENSE" target="_blank" rel="noopener" class="hover:text-yellow-400">License (MIT)</a>
+            </div>
+        </div>
+    </footer>
+
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/51723311" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain">
+            <button id="closeModal" class="absolute top-4 right-4 text-white bg-gray-800 bg-opacity-75 hover:bg-opacity-100 rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-    </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        modal.onclick = function () {
-            modal.style.display = "none";
-        }
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementsByClassName("feature-preview");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-
-        for (let i = 0; i < img.length; i++) {
-            const element = img[i];
-
-            element.onclick = function () {
-                modal.style.display = "block";
-
-                const style = element.currentStyle || window.getComputedStyle(element, false);
-                const src = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-
-                modalImg.src = src;
-                //captionText.innerHTML = this.alt;
-            }
-
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-    </script>
 </body>
 
 </html>
