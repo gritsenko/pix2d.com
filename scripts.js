@@ -2,9 +2,20 @@
 function openModal(imageSrc, altText) {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
+    const attributionText = document.getElementById('attributionText');
     
     modalImage.src = imageSrc;
     modalImage.alt = altText;
+    
+    // Set attribution text based on image
+    if (imageSrc.includes('screenshot1.jpg')) {
+        attributionText.innerHTML = '<strong>Art made by <a href="https://www.artstation.com/alys_h" target="_blank" rel="noopener" class="text-yellow-400 hover:text-yellow-300">Alena Shcherbacheva</a></strong>';
+    } else if (imageSrc.includes('PixelArt.jpg') || imageSrc.includes('drake.gif')) {
+        attributionText.innerHTML = '<strong>Art made by <a href="https://boosty.to/weilard" target="_blank" rel="noopener" class="text-yellow-400 hover:text-yellow-300">Weillard</a></strong>';
+    } else {
+        attributionText.innerHTML = '';
+    }
+    
     modal.classList.remove('hidden');
     
     // Prevent body scroll when modal is open
